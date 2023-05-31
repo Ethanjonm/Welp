@@ -14,8 +14,9 @@ class User < ApplicationRecord
   before_validation :ensure_session_token
 
   def self.find_by_credentials(email, password)
-    
+    # debugger
     user = User.find_by(email: email)
+    # debugger
     # has_secure_password gives us the authenticate method
     if user&.authenticate(password) 
         return user
