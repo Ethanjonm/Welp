@@ -1,0 +1,63 @@
+
+.SignupForm-Container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.SignupForm-Container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: purple
+}
+
+.SignupForm-Container p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+.SignupForm-Container ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #dc3545;
+}
+
+.SignupForm-Container ul li {
+    margin-bottom: 5px;
+}
+
+.SignupForm-Container ul li::before {
+    content: "•";
+    margin-right: 5px;
+}
+
+.SignupForm-Container label {
+    display: block;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.SignupForm-Container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+.SignupForm-Container button {
+    width: 100%;
+    padding: 10px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.Image-Container {
+    text-align: center;
+    margin-top: 20px;
+}

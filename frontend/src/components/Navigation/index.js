@@ -1,10 +1,12 @@
 
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import LogoutButton from "./Logoutbutton";
-import { useDispatch } from 'react-redux';
-
+// import { useDispatch } from 'react-redux';
+import Icon from "./ProfileButton";
+import { NavLink } from "react-router-dom";
+import DemoLogin from "../DemoLogin/DemoLogin";
 
 function Navigation() {
     const sessionUser = useSelector((state) => state.session.user);
@@ -12,16 +14,21 @@ function Navigation() {
 
     
     if (!sessionUser) {
-        return <div>
-                <Link className="login" to="/login">
+        return <div className="Navigation">
+                <Icon />
+                <NavLink className="login" to="/login">
                     Log In
-                </Link>
-                <Link className="signUp" to="/signup">
+                </NavLink>
+                <NavLink className="signUp" to="/signup">
                     Sign Up
-                </Link>
+                </NavLink>
+                <DemoLogin />
             </div>
     } else {
-        return <LogoutButton></LogoutButton>
+        return  <div className="Navigation">
+                <Icon />
+                <LogoutButton />
+                </div>
     }
     
 

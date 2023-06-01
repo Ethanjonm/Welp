@@ -16,7 +16,7 @@ const LogoutButton = () => {
 
     return (
         <div>
-            <button type="submit" onClick={logout} id="logoutButtonInDropDown">
+            <button type="submit" onClick={logout} id="LogoutButton">
                 Log Out
             </button>
         </div>
