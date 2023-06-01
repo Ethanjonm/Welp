@@ -7,6 +7,7 @@ import LogoutButton from "./Logoutbutton";
 import Icon from "./ProfileButton";
 import { NavLink } from "react-router-dom";
 import DemoLogin from "../DemoLogin/DemoLogin";
+import "./Navigation.css"
 
 function Navigation() {
     const sessionUser = useSelector((state) => state.session.user);
@@ -14,22 +15,42 @@ function Navigation() {
 
     
     if (!sessionUser) {
-        return <div className="Navigation">
-                <Icon />
-                <NavLink className="login" to="/login">
-                    Log In
-                </NavLink>
-                <NavLink className="signUp" to="/signup">
-                    Sign Up
-                </NavLink>
-                <DemoLogin />
+        return (
+          <div className="Navigation">
+            <div className="divIcon">
+              <Icon className="icon" />
             </div>
-    } else {
-        return  <div className="Navigation">
-                <Icon />
-                <LogoutButton />
-                </div>
-    }
+            <div className="divRight">
+              <div>
+                <NavLink className="login" to="/login">
+                  Log In
+                </NavLink>
+              </div>
+              <div>
+                <NavLink className="signUp" to="/signup">
+                  Sign Up
+                </NavLink>
+              </div>
+              <div>
+                <DemoLogin className="demoLogin" />
+              </div>
+            </div>
+          </div>
+        );
+      } else {
+        return (
+          <div className="Navigation">
+            <div className="divIcon">
+              <Icon className="Icon" />
+            </div>
+            <div className="divRight">
+              <div>
+                <LogoutButton className="LogoutButton" />
+              </div>
+            </div>
+          </div>
+        );
+      }
     
 
 

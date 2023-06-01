@@ -1,0 +1,37 @@
+.Navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .divIcon {
+    margin-right: 20px;
+  }
+  
+  .icon {
+    font-size: 24px;
+    color: #0073bb;
+  }
+  
+  .divRight {
+    display: flex;
+    align-items: center;
+  }
+  
+  .login,
+  .signUp,
+  .demoLogin {
+    color: #0073bb;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .login:hover,
+  .signUp:hover,
+  .demoLogin:hover {
+    text-decoration: underline;
+  }

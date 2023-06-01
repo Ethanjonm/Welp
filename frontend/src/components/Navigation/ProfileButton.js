@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import "./ProfileButton.css"
 
 
 function Icon() {
@@ -11,9 +12,10 @@ function Icon() {
     }
 
     return (
-        <div>
-            <div style={{ color: "purple", fontSize: "70px" }} onClick={home}>
-                <i class="fa-brands fa-yelp"></i>
+        <div className='Icon-Container' onClick={home}>
+            <h1 className='Title'>Yikes</h1>
+            <div style={{ color: "purple", fontSize: "30px" }} className="icon">
+                <i class="fa-solid fa-spider"></i>
             </div>
         </div>
     )
