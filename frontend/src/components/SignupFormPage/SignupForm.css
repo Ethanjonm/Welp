@@ -22,16 +22,11 @@
     padding: 0;
     margin-bottom: 10px;
     text-align: left;
-    color: #dc3545;
+    color: red;
 }
 
 .SignupForm-Container ul li {
     margin-bottom: 5px;
-}
-
-.SignupForm-Container ul li::before {
-    content: "•";
-    margin-right: 5px;
 }
 
 .SignupForm-Container label {
@@ -48,7 +43,7 @@
 }
 
 .SignupForm-Container button {
-    width: 100%;
+    width: 106%;
     padding: 10px;
     background-color: purple;
     color: white;
