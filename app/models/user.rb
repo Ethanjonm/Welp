@@ -13,6 +13,11 @@ class User < ApplicationRecord
 
   before_validation :ensure_session_token
 
+  has_many :businesses,
+    class_name: :Business,
+    foreign_key: :user_id,
+    dependent: :destroy
+
   def self.find_by_credentials(email, password)
     # debugger
     user = User.find_by(email: email)
