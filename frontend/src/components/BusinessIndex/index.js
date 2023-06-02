@@ -1,28 +1,30 @@
-import { useSelector, useDispatch } from "react-redux";
-import { fetchBusinesses } from "../../store/business";
-import { useEffect } from "react"
-
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBusinesses, getBusinesses } from '../../store/business';
 
 
 function BusinessIndex() {
+    const dispatch = useDispatch();
+    debugger
+    const businesses = useSelector((state) => Object.values(state.business))
+    debugger
+    const shops = useSelector(getBusinesses)
+    
+    useEffect(() => {
+        debugger
+        dispatch(fetchBusinesses());
+    }, [dispatch]);
 
-    // const dispatch = useDispatch()
-    // const business = useSelector(fetchBusinesses())
-
-    // useEffect(() => {
-    //     dispatch(fetchBusinesses())
-    // }, [])
-
-
+    console.log(businesses, shops, "hello");
 
     return (
         <div>
-            <h1>index</h1>
-            <h2></h2>
+            <h1>BUSINESS INDEX</h1>
+            <p>
+
+            </p>
         </div>
-    )
-
+    );
 }
-
 
 export default BusinessIndex;

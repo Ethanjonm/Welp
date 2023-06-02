@@ -9,19 +9,19 @@ import { getBusiness} from "../../store/business";
 function BusinessShowPage() {
 
     const dispatch = useDispatch()
-    let { businessId } = useParams()
-    let business = useSelector(getBusiness(businessId))
-
+    let { Id } = useParams()
+    let business = useSelector(getBusiness(Id))
+    console.log(Id, "hello")
     useEffect(() => {
-        dispatch(fetchBusiness(businessId))
-    }, [business])
+        dispatch(fetchBusiness(Id))
+    }, [])
 
     
 
     return (
         <div>
             <h1>
-               {business.name}
+               business show
             </h1>
         </div>
     )

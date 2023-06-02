@@ -22,11 +22,11 @@ function App() {
         <Route path="/signup">
           <SignupFormPage />
         </Route>
-        <Route>
-          <BusinessIndex exact path="/business"/>
+        <Route exact path="/business">
+          <BusinessIndex />
         </Route>
-        <Route>
-          <BusinessShowPage exact path="/business/:id"/>
+        <Route exact path="/business/:id">
+          <BusinessShowPage />
         </Route>
       </Switch>
     </>

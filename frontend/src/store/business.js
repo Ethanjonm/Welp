@@ -15,11 +15,21 @@ export const receiveBusiness = (business) => ({
 });
 
 export const getBusiness = (businessId) => state => {
-    return state?.business ? state.business[businessId] : null
+    if (state.business) {
+        debugger
+        return state.business[businessId]
+    } else {
+        return null
+    }
 }
 
 export const getBusinesses = state => {
-    return state?.business ? Object.values(state.business) : []
+    debugger
+    if (state.business) {
+        return Object.values(state.business)
+    } else {
+        return []
+    }
 } 
 
 export const fetchBusinesses = () => async (dispatch) => {
@@ -35,13 +45,16 @@ export const fetchBusiness = (business_id) => async (dispatch) => {
 };
 
 const businessReducer = (state = {}, action) => {
-    const newState = { ...state };
+    debugger
     switch (action.type) {
     case RECEIVE_BUSINESSES:
+        debugger
         return { ...state, ...action.business };
     case RECEIVE_BUSINESS:
+        debugger
         return { ...state, [action.business.id]: action.business };
     default:
+        debugger
         return { ...state };
     }
 };

@@ -1,4 +1,5 @@
-@businesses.each do |business| 
+@businesses.each do |business|
+    debugger 
     json.set! business.id do 
         json.extract! business, 
         :id,
