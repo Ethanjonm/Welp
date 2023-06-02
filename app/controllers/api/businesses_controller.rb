@@ -7,7 +7,7 @@ class Api::BusinessesController < ApplicationController
   end
 
   def show
-    @business = Business.find_by(business_id: params[:business_id])
-    render json: @business
+    @business = Business.find(params[:id])
+    render :show
   end
 end
