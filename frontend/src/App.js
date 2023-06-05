@@ -7,29 +7,19 @@ import SplashPage from './components/SplashPage';
 import BusinessShowPage from './components/BusinessShowPage';
 import BusinessIndex from './components/BusinessIndex';
 
-function App() {
+const App = () => {
 
   return (
-    <>
+    <div>
       <Navigation />
       <Switch>
-        <Route exact path="/">
-          <SplashPage />
-        </Route>
-        <Route path="/login">
-          <LoginFormPage />
-        </Route>
-        <Route path="/signup">
-          <SignupFormPage />
-        </Route>
-        <Route exact path="/business">
-          <BusinessIndex />
-        </Route>
-        <Route exact path="/business/:id">
-          <BusinessShowPage />
-        </Route>
+        <Route exact path="/" component={SplashPage} />
+        <Route path="/login" component={LoginFormPage} />
+        <Route path="/signup" component={SignupFormPage} />
+        <Route exact path="/business" component={BusinessIndex} />
+        <Route exact path="/business/:id" component={BusinessShowPage} />
       </Switch>
-    </>
+    </div>
   );
 }
 

@@ -6,7 +6,7 @@ import { fetchBusinesses, getBusinesses } from '../../store/business';
 const BusinessIndex = ()  => {
     const dispatch = useDispatch();
    
-    const businesses = useSelector((state) => Object.values(state.business))
+    const businesses = useSelector(getBusinesses)
     
     
     useEffect(() => {
@@ -21,7 +21,6 @@ const BusinessIndex = ()  => {
             <p>Business .price</p>
             <p>business .state</p>
             <p>business .zip_code</p>
-            {businesses}
         </div>
     );
 }

@@ -6,8 +6,16 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+User.create!(email: "ethan@gmail.com", password: "password", fname: "Ethan", lname: "Mercado", zip_code: "10011" )
+User.create!(email: "billy@gmail.com", password: "password", fname: "Billy", lname: "Mays", zip_code: "10011" )
+User.create!(email: "joey@gmail.com", password: "password", fname: "Joey", lname: "Wheeler", zip_code: "10011" )
+User.create!(email: "jerry@gmail.com", password: "password", fname: "Jerry", lname: "Mouse", zip_code: "10011" )
+User.create!(email: "tom@gmail.com", password: "password", fname: "Tom", lname: "Cat", zip_code: "10011" )
 
-Business.create!(name: "demo", city: "demo", state: "demo", zip_code: "demo", user_id: "4")
-Business.create!(name: "demo2", city: "demo2", state: "demo2", zip_code: "demo2", user_id: "4")
-Business.create!(name: "demo3", city: "demo3", state: "demo3", zip_code: "demo3", user_id: "4")
+
+Business.create!(name: "Best Burgers", city: "Manhattan", state: "NY", zip_code: "10011", user_id: "22")
+Business.create!(name: "Good Food", city: "Manhattan", state: "NY", zip_code: "10011", user_id: "22")
+Business.create!(name: "Please Eat", city: "Manhattan", state: "NY", zip_code: "10011", user_id: "22")
+Business.create!(name: "Food House", city: "Manhattan", state: "NY", zip_code: "10011", user_id: "22")
+Business.create!(name: "Munch", city: "Manhattan", state: "NY", zip_code: "10011", user_id: "22")
 

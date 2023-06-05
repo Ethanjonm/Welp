@@ -61,7 +61,7 @@ const  Navigation = () => {
               <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
                   <button className="linkedinbutton">LinkedIn</button>
               </a>
-              <div style={{ color: "darkgrey", fontSize: "30px" }} className="dropicon" onClick={toggleDropdown}>
+              <div style={{ color: "Red", fontSize: "30px" }} className="dropicon" onClick={toggleDropdown}>
                 <i class="fa-solid fa-house"></i>
               </div>
               {showDropdown && (
@@ -85,7 +85,13 @@ const  Navigation = () => {
               <button className="searchbutton" onClick={handleSearch}><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="divRight">
-              <div style={{ color: "darkgrey", fontSize: "30px" }} className="dropicon" onClick={toggleDropdown}>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <button className="githubbutton">GitHub</button>
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <button className="linkedinbutton">LinkedIn</button>
+              </a>
+              <div style={{ color: "Red", fontSize: "30px" }} className="dropicon" onClick={toggleDropdown}>
                 <i class="fa-solid fa-circle-user"></i>
               </div>
               {showDropdown && (

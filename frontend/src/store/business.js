@@ -32,28 +32,33 @@ export const getBusinesses = state => {
 
 export const fetchBusinesses = () => async (dispatch) => {
     const res = await fetch("/api/businesses");
-    const data = await res.json();
-    dispatch(receiveBusinesses(data));
+
+    if (res.ok) {
+        let data = await res.json();
+        dispatch(receiveBusinesses(data));
+        
+    }
 };
   
 export const fetchBusiness = (business_id) => async (dispatch) => {
     const res = await fetch(`/api/businesses/${business_id}`);
-    const data = await res.json();
-    dispatch(receiveBusiness(data));
+    if (res.ok) {
+        let data = await res.json();
+        dispatch(receiveBusiness(data));
+
+    }
 };
 
-const businessReducer = (state = {}, action) => {
-
+function businessReducer (oldstate = {}, action){
+    let newState = { ...oldstate}
     switch (action.type) {
-    case RECEIVE_BUSINESSES:
-        
-        return { ...state, ...action.business };
-    case RECEIVE_BUSINESS:
-        
-        return { ...state, [action.business.id]: action.business };
-    default:
-        
-        return state;
+        case RECEIVE_BUSINESSES:
+            return { ...oldstate, ...action.businesses };
+        case RECEIVE_BUSINESS:
+            newState[action.business.id] = action.business
+            return newState
+        default:
+            return oldstate;
     }
 };
 
