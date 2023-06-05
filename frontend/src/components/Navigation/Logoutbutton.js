@@ -2,6 +2,7 @@ import React from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 
 const LogoutButton = () => {

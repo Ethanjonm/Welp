@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchBusinesses, getBusinesses } from '../../store/business';
 
 
-function BusinessIndex() {
+const BusinessIndex = ()  => {
     const dispatch = useDispatch();
-    debugger
+   
     const businesses = useSelector((state) => Object.values(state.business))
-    debugger
-    const shops = useSelector(getBusinesses)
+    
+    const shops = useSelector(state => Object.values(state.business))
     
     useEffect(() => {
         debugger
@@ -19,10 +19,10 @@ function BusinessIndex() {
 
     return (
         <div>
-            <h1>BUSINESS INDEX</h1>
-            <p>
-
-            </p>
+            <h1>BUSINESS Name</h1>
+            <p>Business .price</p>
+            <p>business .state</p>
+            <p>business .zip_code</p>
         </div>
     );
 }

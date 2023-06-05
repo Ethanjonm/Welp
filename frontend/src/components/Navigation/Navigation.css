@@ -1,37 +1,66 @@
 .Navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: transparent;
+  height: 60px;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+}
   
-  .divIcon {
+.divIcon {
     margin-right: 20px;
-  }
+}
   
-  .icon {
+.icon {
     font-size: 24px;
-    color: #0073bb;
-  }
+    color: blue;
+}
   
-  .divRight {
+.divRight {
     display: flex;
     align-items: center;
-  }
+}
   
-  .login,
-  .signUp,
-  .demoLogin {
-    color: #0073bb;
+.login,
+.signUp,
+.demoLogin {
+    color: blue;
     text-decoration: none;
     font-size: 16px;
     margin-right: 10px;
-  }
+}
   
-  .login:hover,
-  .signUp:hover,
-  .demoLogin:hover {
+.login:hover,
+.signUp:hover,
+.demoLogin:hover {
     text-decoration: underline;
-  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px; 
+  right: 0; 
+  background-color: white; 
+  box-shadow: 0 1px 5px black; 
+  border-radius: 4px;
+  min-width: 160px; 
+  z-index: 11;
+  overflow: hidden;
+}
+  
+.dropdown-menu a {
+  color: black; 
+  padding: 10px 20px; 
+  text-decoration: none;
+  display: block;
+  white-space: nowrap; 
+  font-size: 14px; 
+  line-height: 1.5; 
+}
+  
+.dropdown-menu a:hover {
+  background-color: lightgray; 
+}

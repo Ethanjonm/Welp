@@ -15,7 +15,7 @@ function Icon() {
         <div className='Icon-Container' onClick={home}>
             <h1 className='Title'>Yikes</h1>
             <div style={{ color: "purple", fontSize: "30px" }} className="icon">
-                <i class="fa-solid fa-spider"></i>
+            <i class="fa-brands fa-yelp"></i>
             </div>
         </div>
     )
