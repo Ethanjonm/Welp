@@ -13,7 +13,7 @@ function DemoLogin() {
     return(
 
         <div onClick={handleDemo}>
-            <NavLink className="demoLogin" to="/">Demo Login</NavLink>
+            <NavLink Name="demoLogin" to="/">Demo Login</NavLink>
         </div>
     )
 }

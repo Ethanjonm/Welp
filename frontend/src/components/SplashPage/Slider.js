@@ -1,7 +1,7 @@
 import "./Slider.css"
 import { SliderData } from "./data"
 import React, { useState, useEffect, useCallback } from 'react';
-import {FaArrowCircleRight, FaArrowCircleLeft} from 'react-icons/fa'
+// import {FaArrowCircleRight, FaArrowCircleLeft} from 'react-icons/fa'
 
 
 

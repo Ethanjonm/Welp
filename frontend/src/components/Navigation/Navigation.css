@@ -12,6 +12,8 @@
   
 .divIcon {
     margin-right: 20px;
+    display: flex;
+    align-items: center;
 }
   
 .icon {
@@ -63,4 +65,54 @@
   
 .dropdown-menu a:hover {
   background-color: lightgray; 
+}
+
+.searchbar {
+  height: 18.5px;
+  width: 250px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  margin-left: 15px;
+  padding: 5px;
+  outline: none;
+}
+
+.searchbutton {
+  background-color: #d32323;
+  border: none;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: -4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  cursor: pointer;
+}
+
+.searchbutton i {
+  vertical-align: middle;
+}
+
+.githubbutton,
+.linkedinbutton {
+    color: #fff; /* white text */
+    background-color: #d32323; /* red background */
+    padding: 5px 15px; /* padding to give some space around the text */
+    font-size: 14px; /* adjust as needed */
+    border: none;
+    border-radius: 3px; /* rounded corners */
+    cursor: pointer;
+    text-decoration: none; /* removes the underline */
+    transition: background-color 0.3s ease; /* smooth color change */
+    display: inline-block; /* necessary for padding to work on a link */
+    margin-right: 10px; /* space between the buttons */
+}
+
+/* hover effect */
+.githubbutton:hover,
+.linkedinbutton:hover {
+    background-color: #bc2020; /* a darker red */
 }

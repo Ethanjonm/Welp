@@ -8,7 +8,7 @@
 .SignupForm-Container h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: purple
+    color: Red
 }
 
 .SignupForm-Container p {
@@ -45,7 +45,7 @@
 .SignupForm-Container button {
     width: 106%;
     padding: 10px;
-    background-color: purple;
+    background-color: Red;
     color: white;
     border: none;
     border-radius: 3px;

@@ -22,10 +22,9 @@ const  LoginFormPage = () => {
       .catch(async (res) => {
         let data;
         try {
-          // .clone() essentially allows you to read the response body twice
           data = await res.clone().json();
         } catch {
-          data = await res.text(); // Will hit this case if the server is down
+          data = await res.text();
         }
         if (data?.errors) setErrors(data.errors);
         else if (data) setErrors([data]);
@@ -36,8 +35,8 @@ const  LoginFormPage = () => {
   return (
     <div>
       <div className='LoginForm-Container'>
-          <h2 className='heading'>Login to Yikes</h2>
-          <p className='subheading'>New to Yikes <a className='signup-link' href='/signup'>Sign up</a>.</p>
+          <h2 className='heading'>Login to Welp</h2>
+          <p className='subheading'>New to Welp <a className='signup-link' href='/signup'>Sign up</a>.</p>
           <form onSubmit={handleSubmit} className="loginForm">
           <ul className='errors'>
               {errors.map(error => <li key={error}>{error}</li>)}

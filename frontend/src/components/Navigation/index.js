@@ -10,6 +10,7 @@ import "./Navigation.css"
 import { useState } from "react";
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 
 const  Navigation = () => {
@@ -17,6 +18,13 @@ const  Navigation = () => {
     const dispatch = useDispatch();
     const sessionUser = useSelector((state) => state.session.user);
     const [showDropdown, setShowDropdown] = useState(false);
+    const history = useHistory()
+
+    const handleSearch = (e) => {
+      e.preventDefault()
+      history.push("/business")
+
+    }
 
     const handleDemo = (e) => {
       e.preventDefault()
@@ -43,9 +51,17 @@ const  Navigation = () => {
           <div className="Navigation">
             <div className="divIcon">
               <Icon className="icon" />
+              <input type="text" className="searchbar" placeholder="Pizza, Seafood, Burgers"></input>
+              <button className="searchbutton" onClick={handleSearch}><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="divRight">
-              <div style={{ color: "Black", fontSize: "30px" }} className="dropicon" onClick={toggleDropdown}>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <button className="githubbutton">GitHub</button>
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <button className="linkedinbutton">LinkedIn</button>
+              </a>
+              <div style={{ color: "darkgrey", fontSize: "30px" }} className="dropicon" onClick={toggleDropdown}>
                 <i class="fa-solid fa-house"></i>
               </div>
               {showDropdown && (
@@ -65,9 +81,11 @@ const  Navigation = () => {
           <div className="Navigation">
             <div className="divIcon">
               <Icon className="Icon" />
+              <input type="text" className="searchbar" placeholder="Pizza, Seafood, Burgers"></input>
+              <button className="searchbutton" onClick={handleSearch}><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="divRight">
-              <div style={{ color: "Black", fontSize: "30px" }} className="dropicon" onClick={toggleDropdown}>
+              <div style={{ color: "darkgrey", fontSize: "30px" }} className="dropicon" onClick={toggleDropdown}>
                 <i class="fa-solid fa-circle-user"></i>
               </div>
               {showDropdown && (

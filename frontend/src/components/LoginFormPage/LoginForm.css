@@ -7,7 +7,7 @@
 .LoginForm-Container h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: purple
+    color: red
 }
 
 .LoginForm-Container p {
@@ -44,7 +44,7 @@
 .LoginForm-Container button {
     width: 106%;
     padding: 10px;
-    background-color: purple;
+    background-color: Red;
     color: white;
     border: none;
     border-radius: 3px;

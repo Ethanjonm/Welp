@@ -8,14 +8,12 @@ const BusinessIndex = ()  => {
    
     const businesses = useSelector((state) => Object.values(state.business))
     
-    const shops = useSelector(state => Object.values(state.business))
     
     useEffect(() => {
-        debugger
         dispatch(fetchBusinesses());
     }, [dispatch]);
 
-    console.log(businesses, shops, "hello");
+    console.log(businesses, "hello");
 
     return (
         <div>
@@ -23,6 +21,7 @@ const BusinessIndex = ()  => {
             <p>Business .price</p>
             <p>business .state</p>
             <p>business .zip_code</p>
+            {businesses}
         </div>
     );
 }

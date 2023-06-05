@@ -42,8 +42,8 @@ const SignupFormPage = () => {
 
     <div className="Container">  
         <div className="SignupForm-Container"> 
-            <h2>Sign Up for Yikes</h2>
-            <p>Connect with Spooky Businesses</p>
+            <h2>Sign Up for Welp</h2>
+            <p>Connect with local Businesses</p>
             <p>Term of Service... Mabey</p>
             <form onSubmit={handleSubmit}>
             <ul className="errors">
