@@ -13,7 +13,7 @@ const SplashPage = ()  => {
         history.push("/businesses");
     }
 
-    
+    //test
     return (
         <div className='splashpage'>
             <Slider slides={data} className="sliderindex"></Slider>
