@@ -28,7 +28,6 @@ const Slider = ( { slides } ) => {
         return null;
     }
 
-    // console.log(current)
 
     return (
         <section className="slider">

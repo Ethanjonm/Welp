@@ -15,7 +15,7 @@ function Icon() {
         <div className='Icon-Container' onClick={home}>
             <h1 className='Title'>Welp</h1>
             <div style={{ color: "Red", fontSize: "30px" }} className="icon">
-            <i class="fa-brands fa-yelp"></i>
+            <i className="fa-brands fa-yelp"></i>
             </div>
         </div>
     )

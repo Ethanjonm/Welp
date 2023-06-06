@@ -21,7 +21,7 @@ const SplashPage = ()  => {
                 <div className="header-content">
                     <h1 className='splashh1'>Welp</h1>
                     <div style={{ color: "Red", fontSize: "30px" }} className="splashicon">
-                        <i class="fa-brands fa-yelp"></i>
+                        <i className="fa-brands fa-yelp"></i>
                     </div>
                 </div>
                 <h2 className='splashh2'>Feeling Hungry?</h2>

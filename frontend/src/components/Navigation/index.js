@@ -52,7 +52,7 @@ const  Navigation = () => {
             <div className="divIcon">
               <Icon className="icon" />
               <input type="text" className="searchbar" placeholder="Pizza, Seafood, Burgers"></input>
-              <button className="searchbutton" onClick={handleSearch}><i class="fa-solid fa-magnifying-glass"></i></button>
+              <button className="searchbutton" onClick={handleSearch}><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="divRight">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">
@@ -62,7 +62,7 @@ const  Navigation = () => {
                   <button className="linkedinbutton">LinkedIn</button>
               </a>
               <div style={{ color: "Red", fontSize: "30px" }} className="dropicon" onClick={toggleDropdown}>
-                <i class="fa-solid fa-house"></i>
+                <i className="fa-solid fa-house"></i>
               </div>
               {showDropdown && (
                 <div className="dropdown-menu">
@@ -82,7 +82,7 @@ const  Navigation = () => {
             <div className="divIcon">
               <Icon className="Icon" />
               <input type="text" className="searchbar" placeholder="Pizza, Seafood, Burgers"></input>
-              <button className="searchbutton" onClick={handleSearch}><i class="fa-solid fa-magnifying-glass"></i></button>
+              <button className="searchbutton" onClick={handleSearch}><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="divRight">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">
@@ -92,7 +92,7 @@ const  Navigation = () => {
                   <button className="linkedinbutton">LinkedIn</button>
               </a>
               <div style={{ color: "Red", fontSize: "30px" }} className="dropicon" onClick={toggleDropdown}>
-                <i class="fa-solid fa-circle-user"></i>
+                <i className="fa-solid fa-circle-user"></i>
               </div>
               {showDropdown && (
                 <div className="dropdown-menu">

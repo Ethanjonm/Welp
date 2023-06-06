@@ -10,16 +10,13 @@ class Api::SessionsController < ApplicationController
   end
 
   def create
-    # debugger
     @user = User.find_by_credentials(params[:email], params[:password])
     
     if @user
-      # debugger
       login!(@user)
       render 'api/users/show'
       # render json:  @user
     else
-      # debugger
       render json: { errors: ['The provided credentials were invalid.'] }, 
         status: :unauthorized
     end

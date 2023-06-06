@@ -12,7 +12,7 @@ const BusinessShowPage = () => {
     const dispatch = useDispatch()
     let  businessId  = useParams()
     let business = useSelector(getBusiness(businessId.id))
-    console.log(businessId, business, "hello")
+    // console.log(businessId, business, "hello")
 
     useEffect(() => {
         dispatch(fetchBusiness(businessId.id))
@@ -56,11 +56,11 @@ const BusinessShowPage = () => {
             <div className="bussinessinfo">
             <h1 className="businessName">{business.name}</h1>
             <div className="starRating">
-            <i class="fa-solid fa-star" style={{ color: starColor1 }}></i>
-            <i class="fa-solid fa-star" style={{ color: starColor2 }}></i>
-            <i class="fa-solid fa-star" style={{ color: starColor3 }}></i>
-            <i class="fa-solid fa-star" style={{ color: starColor4 }}></i>
-            <i class="fa-solid fa-star" style={{ color: starColor5 }}></i>
+            <i className="fa-solid fa-star" style={{ color: starColor1 }}></i>
+            <i className="fa-solid fa-star" style={{ color: starColor2 }}></i>
+            <i className="fa-solid fa-star" style={{ color: starColor3 }}></i>
+            <i className="fa-solid fa-star" style={{ color: starColor4 }}></i>
+            <i className="fa-solid fa-star" style={{ color: starColor5 }}></i>
             </div>
             {dollarSigns}
             <h3>{business.category}</h3>

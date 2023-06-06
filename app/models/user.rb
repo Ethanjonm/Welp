@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  email           :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  zip_code        :string           not null
+#  fname           :string           not null
+#  lname           :string           not null
+#  birthday        :date
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
 class User < ApplicationRecord
   has_secure_password
   
@@ -19,9 +34,7 @@ class User < ApplicationRecord
     dependent: :destroy
 
   def self.find_by_credentials(email, password)
-    # debugger
     user = User.find_by(email: email)
-    # debugger
     # has_secure_password gives us the authenticate method
     if user&.authenticate(password) 
         return user
