@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:index, :create, :destroy, :update, :show]
   end
 
-
+  get '*path', to: "static_pages#frontend_index"
 
 
 end
