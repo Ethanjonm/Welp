@@ -40,8 +40,8 @@ export const fetchBusinesses = () => async (dispatch) => {
     }
 };
   
-export const fetchBusiness = (business_id) => async (dispatch) => {
-    const res = await fetch(`/api/businesses/${business_id}`);
+export const fetchBusiness = (businessId) => async (dispatch) => {
+    const res = await fetch(`/api/businesses/${businessId}`)
     if (res.ok) {
         let data = await res.json();
         dispatch(receiveBusiness(data));

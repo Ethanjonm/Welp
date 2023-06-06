@@ -10,16 +10,16 @@ import business1 from "../images/business1.jpg"
 const BusinessShowPage = () => {
 
     const dispatch = useDispatch()
-    let { Id } = useParams()
-    let business = useSelector(getBusiness(4))
-    console.log(Id, "hello")
+    let  businessId  = useParams()
+    let business = useSelector(getBusiness(businessId.id))
+    console.log(businessId, business, "hello")
 
     useEffect(() => {
-        dispatch(fetchBusiness(Id))
-    }, [Id])
+        dispatch(fetchBusiness(businessId.id))
+    }, [businessId.id])
 
 
-    let rating = 5
+    let rating = business.rating
     let starColor1 = "grey"
     let starColor2 = "grey"
     let starColor3 = "grey"
@@ -40,7 +40,7 @@ const BusinessShowPage = () => {
     if (rating >= 5) {
         starColor5 = "gold"
     }
-    let price = 2
+    let price = business.priceRange
     const dollarSigns = [];
     for (let i = 0; i < price; i++) {
         dollarSigns.push(<i key={i} className="fa-solid fa-dollar-sign"></i>);
@@ -54,7 +54,7 @@ const BusinessShowPage = () => {
                 <img src={business1} className="showimage"/>
             </div>
             <div className="bussinessinfo">
-            <h1 className="businessName">business Name</h1>
+            <h1 className="businessName">{business.name}</h1>
             <div className="starRating">
             <i class="fa-solid fa-star" style={{ color: starColor1 }}></i>
             <i class="fa-solid fa-star" style={{ color: starColor2 }}></i>
@@ -63,7 +63,7 @@ const BusinessShowPage = () => {
             <i class="fa-solid fa-star" style={{ color: starColor5 }}></i>
             </div>
             {dollarSigns}
-            <h3>categorys</h3>
+            <h3>{business.category}</h3>
             </div>
             <div>
                 <p>Open</p>
@@ -72,10 +72,7 @@ const BusinessShowPage = () => {
             <div className="bottominfo">
                 <button>Write a Review</button>
             </div>
-            <h1>{business} HELLO</h1>
-
-
-            
+          
         </div>
     )
 

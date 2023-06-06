@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBusinesses, getBusinesses } from '../../store/business';
+import BusinessItem from './BusinessItem';
 
 
 const BusinessIndex = ()  => {
@@ -13,14 +14,22 @@ const BusinessIndex = ()  => {
         dispatch(fetchBusinesses());
     }, [dispatch]);
 
-    console.log(businesses, "hello");
+
+    // console.log(businesses, "hello");
+
+    // let items = businesses.map(data => <BusinessItem data={data}></BusinessItem>)
 
     return (
-        <div>
-            <h1>BUSINESS Name</h1>
-            <p>Business .price</p>
-            <p>business .state</p>
-            <p>business .zip_code</p>
+        <div className='businessindex'>
+            {businesses.map((business) => {
+                return (
+                <div className='businessItem' key={business.id}>
+                    <BusinessItem business={business} />
+                </div>
+                )
+                
+            })}
+
         </div>
     );
 }

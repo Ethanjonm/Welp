@@ -22,7 +22,7 @@ const  Navigation = () => {
 
     const handleSearch = (e) => {
       e.preventDefault()
-      history.push("/business")
+      history.push("/businesses")
 
     }
 

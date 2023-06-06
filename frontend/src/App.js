@@ -16,8 +16,8 @@ const App = () => {
         <Route exact path="/" component={SplashPage} />
         <Route path="/login" component={LoginFormPage} />
         <Route path="/signup" component={SignupFormPage} />
-        <Route exact path="/business" component={BusinessIndex} />
-        <Route exact path="/business/:id" component={BusinessShowPage} />
+        <Route exact path="/businesses" component={BusinessIndex} />
+        <Route exact path="/businesses/:id" component={BusinessShowPage} />
       </Switch>
     </div>
   );

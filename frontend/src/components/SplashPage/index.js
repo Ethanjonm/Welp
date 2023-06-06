@@ -10,7 +10,7 @@ const SplashPage = ()  => {
 
     const businessIndex = async (e) => {
         e.preventDefault();
-        history.push("/business");
+        history.push("/businesses");
     }
 
     
