@@ -6,11 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-User.create!(email: "ethan@gmail.com", password: "password", fname: "Ethan", lname: "Mercado", zip_code: "10011" )
-User.create!(email: "billy@gmail.com", password: "password", fname: "Billy", lname: "Mays", zip_code: "10011" )
-User.create!(email: "joey@gmail.com", password: "password", fname: "Joey", lname: "Wheeler", zip_code: "10011" )
-User.create!(email: "jerry@gmail.com", password: "password", fname: "Jerry", lname: "Mouse", zip_code: "10011" )
-User.create!(email: "tom@gmail.com", password: "password", fname: "Tom", lname: "Cat", zip_code: "10011" )
+User.create!(email: "ethan@ethan.com", password: "password", fname: "Ethan", lname: "Mercado", zip_code: "10011" )
+User.create!(email: "billy@billy.com", password: "password", fname: "Billy", lname: "Mays", zip_code: "10011" )
+User.create!(email: "joey@joey.com", password: "password", fname: "Joey", lname: "Wheeler", zip_code: "10011" )
+User.create!(email: "jerry@jerry.com", password: "password", fname: "Jerry", lname: "Mouse", zip_code: "10011" )
+User.create!(email: "tom@tom.com", password: "password", fname: "Tom", lname: "Cat", zip_code: "10011" )
+User.create!(email: "demo@demo.com", password: "password", fname: "Demo", lname: "Red", zip_code: "10011" )
 
 
 Business.create!(name: "Best Burgers", city: "Manhattan", state: "NY", zip_code: "10011", phone_number: "555-555-5555", category: "Bugers", price_range: 3, rating: 4)
