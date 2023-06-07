@@ -12,7 +12,6 @@
 #  price_range  :float
 #  longitude    :float
 #  latitude     :float
-#  user_id      :bigint           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  rating       :float
@@ -24,9 +23,6 @@ class Business < ApplicationRecord
     validates :state, presence: true
     validates :zip_code, presence: true
 
-    belongs_to :owner,
-        class_name: :User,
-        foreign_key: :user_id
 
     has_one_attached :photo
 
