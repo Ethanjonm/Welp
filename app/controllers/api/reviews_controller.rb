@@ -1,4 +1,5 @@
 class Api::ReviewsController < ApplicationController
+
     before_action :require_logged_in, only: [:create, :update, :destroy]
 
     def index
@@ -7,7 +8,7 @@ class Api::ReviewsController < ApplicationController
     end
 
     def show 
-        @reviews = Review.find(params[:id])
+        @review = Review.find(params[:id])
         render :show
     end
 
@@ -37,6 +38,7 @@ class Api::ReviewsController < ApplicationController
         @review = Review.find(params[:id])
         if @review && @review.update(review_params)
             @review.business.update_rating
+            render :show
         else
             render json: @review.errors.full_messages, status: 422
         end
