@@ -25,12 +25,13 @@ class Api::ReviewsController < ApplicationController
         end
 
     end
-
+    ## need to add update on destroy
     def destroy
         @review = Review.find(params[:id])
 
         if @review && @review.user_id == current_user.id
             @review.destroy
+            @review.business.update_rating
         end
     end
 

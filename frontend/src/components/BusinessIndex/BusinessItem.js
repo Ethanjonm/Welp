@@ -20,6 +20,7 @@ const BusinessItem = ({ business }) => {
             <div>Price: {business.priceRange}</div>
             <div>City: {business.city}</div>
             <div onClick={(e) => dispatch(getBusiness(business.id))}>
+                
             <Link to={`/businesses/${business.id}`}>LINK</Link>
             </div>
 

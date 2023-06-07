@@ -8,7 +8,7 @@ function DemoLogin() {
 
     const handleDemo = (e) => {
         e.preventDefault()
-        return dispatch(sessionActions.login({ email: "ethan@gmail.com", password:"password" }));
+        return dispatch(sessionActions.login({ email: "demo@demo.com", password:"password" }));
     }
     return(
 
@@ -17,7 +17,5 @@ function DemoLogin() {
         </div>
     )
 }
-
-{/* <button onClick={handleClick} id="DemoLogin">Demo Login</button> */}
 
 export default DemoLogin;

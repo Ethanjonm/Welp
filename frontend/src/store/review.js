@@ -36,8 +36,8 @@ export const getReviews = (state) => {
     }
 }
 
-export const fetchAllReviews = () => async (dispatch) => {
-    const res = await csrfFetch(`/api/reviews/`); 
+export const fetchReviews = (businessId) => async (dispatch) => {
+    const res = await csrfFetch(`/api/businesses/${businessId}/reviews`); 
 
     if (res.ok) {
         const reviews = await res.json();
@@ -101,7 +101,8 @@ const reviewsReducer = (oldState = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_REVIEW: 
-            newState[action.review.business.id] = action.review.restaurant; 
+        debugger
+            newState[action.review.businessId] = action.review.businessId; 
             return newState;
         case RECEIVE_REVIEWS: 
             return { ...oldState, ...action.reviews };

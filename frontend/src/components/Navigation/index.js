@@ -28,7 +28,7 @@ const  Navigation = () => {
 
     const handleDemo = (e) => {
       e.preventDefault()
-      return dispatch(sessionActions.login({ email: "ethan@gmail.com", password:"password" }));
+      return dispatch(sessionActions.login({ email: "demo@demo.com", password:"password" }));
     }
     
   

@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation";
 import SplashPage from './components/SplashPage';
 import BusinessShowPage from './components/BusinessShowPage';
 import BusinessIndex from './components/BusinessIndex';
+import WriteReview from './components/WriteReview/WriteReview';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/signup" component={SignupFormPage} />
         <Route exact path="/businesses" component={BusinessIndex} />
         <Route exact path="/businesses/:id" component={BusinessShowPage} />
+        <Route exact path="/businesses/:id/writereview" component={WriteReview} />
       </Switch>
     </div>
   );
