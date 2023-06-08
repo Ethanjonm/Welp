@@ -1,8 +1,9 @@
 import React from 'react';
-
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import * as sessionActions from '../../store/session';
+import "./ReviewButton.css";
+
 
 
 const WriteReviewButton = ({businessId}) => {
@@ -11,6 +12,7 @@ const WriteReviewButton = ({businessId}) => {
     const sessionUser = useSelector(state => state.session.user);
 
     const writeReviewPage = () => {
+
         history.push(`/businesses/${businessId}/writereview`);
     };
 

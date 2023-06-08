@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBusinesses, getBusinesses } from '../../store/business';
 import BusinessItem from './BusinessItem';
+import "./BusinessIndex.css";
+
 
 
 const BusinessIndex = ()  => {
