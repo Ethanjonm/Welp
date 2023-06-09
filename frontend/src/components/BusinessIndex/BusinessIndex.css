@@ -1,0 +1,33 @@
+
+.indexItems {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    max-width: 800px; /* adjust as needed */
+    width: 100%;
+}
+
+.indexImageContainer {
+    flex: 1;
+    margin-right: 20px; /* adjust as needed */
+}
+
+.infoContainer {
+    flex: 2;
+    padding: 20px;
+}
+
+.indexImage {
+    width: 200px;
+    height: 200px;
+}
+
+.map {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 800px;  /* Adjust as needed */
+    width: 500px;  /* Adjust as needed */
+}

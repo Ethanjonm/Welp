@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchBusinesses, getBusinesses } from '../../store/business';
 import BusinessItem from './BusinessItem';
 import "./BusinessIndex.css";
-
+import map1 from "../images/map1.jpg"
 
 
 const BusinessIndex = ()  => {
@@ -27,6 +27,9 @@ const BusinessIndex = ()  => {
                 return (
                 <div className='businessItem' key={business.id}>
                     <BusinessItem business={business} />
+                    <div className='mapDiv'>
+                        <img src={map1} className="map"></img>
+                    </div>
                 </div>
                 )
                 

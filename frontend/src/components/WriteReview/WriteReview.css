@@ -1,0 +1,40 @@
+.ReviewForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+
+  
+  .ReviewFormWrap {
+    text-align: center;
+
+  }
+  
+
+.ReviewFormTextarea
+ {
+    display: flex;
+    width: 400px;
+    height: 300px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+.PleaseWork {
+    display: flex;
+    width: 400px;
+    height: 300px;
+    font-size: 14px;
+    outline: none;
+    resize: none;
+}
+.ReviewFormSubmit{
+    color: red;
+    transition: all 0.3s;
+    transform: scale(1.2);
+    cursor: pointer;
+}
