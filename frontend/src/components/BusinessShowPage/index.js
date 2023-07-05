@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { fetchBusiness } from "../../store/business";
 import { getBusiness } from "../../store/business";
 import { getReviews } from "../../store/review";
@@ -8,12 +8,16 @@ import business5 from "../images/business5.jpg";
 import { fetchReviews } from "../../store/review";
 import WriteReviewButton from "./WriteReviewButton";
 import "./BusinessShow.css";
+import { deleteReview } from "../../store/review";
 
 const BusinessShowPage = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const { id } = useParams();
   const business = useSelector(getBusiness(id));
   const reviews = useSelector(getReviews);
+
+  const currentUser = useSelector(state => state.session.user);
 
   
   useEffect(() => {
@@ -29,8 +33,12 @@ const BusinessShowPage = () => {
   }
 
   const filteredReviews = Object.values(reviews)
+  .filter((item) => item.businessId === Number(id));
+  
+  const filteredReviewsId = Object.values(reviews)
     .filter((item) => item.businessId === Number(id))
-    .map((item) => item.body);
+    .map((item) => item.userId);
+
 
   let rating = business.rating;
   let starColor1 = rating >= 1 ? "gold" : "grey";
@@ -44,6 +52,12 @@ const BusinessShowPage = () => {
   for (let i = 0; i < price; i++) {
     dollarSigns.push(<i key={i} className="fa-solid fa-dollar-sign"></i>);
   }
+
+
+
+
+
+
 
   return (
     <div className="businessShowContainer">
@@ -71,7 +85,11 @@ const BusinessShowPage = () => {
       <div className="reviewSection">
         <WriteReviewButton businessId={id} />
         {filteredReviews.map((review, index) => (
-          <p key={index}>Review {index + 1}: {review}</p>
+          <div key={index}>
+            <p>Review {index + 1}: {review.body}</p>
+            {review.userId === currentUser?.id && 
+              <button onClick={() => dispatch(deleteReview(review.id))}>Delete Review</button>}
+          </div>
         ))}
       </div>
     </div>

@@ -71,7 +71,7 @@ export const createReview = (reviewObj, businessId, history) => async (dispatch)
     return res;
 };
 
-export const updateReview = (reviewObj, reviewId) => async (dispatch) => {
+export const updateReview = (reviewObj, reviewId, businessId, history) => async (dispatch) => {
     const res = await csrfFetch(`/api/reviews/${reviewId}`, {
         method: "PATCH",
         body: JSON.stringify(reviewObj)
@@ -79,7 +79,8 @@ export const updateReview = (reviewObj, reviewId) => async (dispatch) => {
 
     if (res.ok) {
         const review = await res.json();
-        dispatch(receiveReview(review)); 
+        dispatch(receiveReview(review));
+        history.push(`/businesses/${businessId}`); 
     }
     return res;
 };
@@ -101,7 +102,6 @@ const reviewsReducer = (oldState = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_REVIEW: 
-        debugger
             newState[action.review.businessId] = action.review.businessId; 
             return newState;
         case RECEIVE_REVIEWS: 

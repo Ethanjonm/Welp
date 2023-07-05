@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { createReview } from '../../store/review';
+import { updateReview } from '../../store/review';
 import { useHistory, useParams } from 'react-router-dom';
-import './WriteReview.css';
+import './UpdateReview.css';
 import { getBusiness } from '../../store/business';
 import { fetchBusiness } from '../../store/business';
 import { getReviews } from '../../store/review';
 import { fetchReviews } from '../../store/review';
 
-const WriteReview = () => {
+const UpdateReview = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   const [body, setBody] = useState('');
@@ -17,6 +17,8 @@ const WriteReview = () => {
   const business = useSelector(getBusiness(businessId.id));
   const rev = useSelector(getReviews);
 
+
+  
   useEffect(() => {
     dispatch(fetchBusiness(businessId.id));
   }, [businessId.id]);
@@ -37,7 +39,7 @@ const WriteReview = () => {
       business_id: businessId.id
     };
     
-    await dispatch(createReview(reviewObj, businessId.id, history));
+    await dispatch(updateReview(reviewObj, rev[0].id, businessId.id, history));
   };
 
   return (
@@ -63,7 +65,7 @@ const WriteReview = () => {
               className='PleaseWork'
               maxLength="1300"
               minLength="100"
-              placeholder="WRITE, but I was practically dying of hunger so I popped in. 
+              placeholder="UPDATE, but I was practically dying of hunger so I popped in. 
             The definition of a hole-in-the-wall. I got the regular hamburger and wow…  there are no words. 
             A classic burger done right. Crisp bun, juicy patty, stuffed with all the essentials 
             (ketchup, shredded lettuce, tomato, and pickles). There’s about a million options available between 
@@ -78,4 +80,4 @@ const WriteReview = () => {
   );
 };
 
-export default WriteReview;
+export default UpdateReview;
