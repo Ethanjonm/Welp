@@ -16,9 +16,12 @@ const UpdateReview = () => {
   const businessId = useParams();
   const business = useSelector(getBusiness(businessId.id));
   const rev = useSelector(getReviews);
-
+  const currentUser = useSelector(state => state.session.user);
 
   
+  const userReview = rev.find(review => review.businessId === Number(businessId.id) && review.userId === currentUser.id);
+  
+//   console.log(userReview )
   useEffect(() => {
     dispatch(fetchBusiness(businessId.id));
   }, [businessId.id]);
@@ -39,7 +42,7 @@ const UpdateReview = () => {
       business_id: businessId.id
     };
     
-    await dispatch(updateReview(reviewObj, rev[0].id, businessId.id, history));
+    await dispatch(updateReview(reviewObj, userReview.id, businessId.id, history));
   };
 
   return (
