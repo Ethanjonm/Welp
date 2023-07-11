@@ -4,6 +4,7 @@ import { fetchBusinesses, getBusinesses } from '../../store/business';
 import BusinessItem from './BusinessItem';
 import "./BusinessIndex.css";
 import map1 from "../images/map1.jpg"
+import IndexMap from '../Map/IndexMap';
 
 
 const BusinessIndex = ()  => {
@@ -22,19 +23,19 @@ const BusinessIndex = ()  => {
     // let items = businesses.map(data => <BusinessItem data={data}></BusinessItem>)
 
     return (
-        <div className='businessindex'>
-            {businesses.map((business) => {
-                return (
-                <div className='businessItem' key={business.id}>
-                    <BusinessItem business={business} />
-                    <div className='mapDiv'>
-                        <img src={map1} className="map"></img>
+        <div>
+            <div className='businessindex'>
+                {businesses.map((business) => {
+                    return (
+                    <div className='businessItem' key={business.id}>
+                        <BusinessItem business={business} />
                     </div>
-                </div>
-                )
-                
-            })}
+                    )
+                    
+                })}
 
+            </div>
+            <IndexMap />
         </div>
     );
 }

@@ -9,6 +9,8 @@ import { fetchReviews } from "../../store/review";
 import WriteReviewButton from "./WriteReviewButton";
 import "./BusinessShow.css";
 import { deleteReview } from "../../store/review";
+import BusinessMap from "../Map/BusinessMap";
+
 
 const BusinessShowPage = () => {
   const dispatch = useDispatch();
@@ -16,6 +18,7 @@ const BusinessShowPage = () => {
   const { id } = useParams();
   const business = useSelector(getBusiness(id));
   const reviews = useSelector(getReviews);
+
 
   const currentUser = useSelector(state => state.session.user);
 
@@ -92,6 +95,7 @@ const BusinessShowPage = () => {
           </div>
         ))}
       </div>
+      <BusinessMap business={business} />
     </div>
   );
 };

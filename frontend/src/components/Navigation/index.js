@@ -51,7 +51,7 @@ const  Navigation = () => {
           <div className="Navigation">
             <div className="divIcon">
               <Icon className="icon" />
-              <input type="text" className="searchbar" placeholder="Pizza, Seafood, Burgers"></input>
+              <input type="text" className="searchbar" placeholder="Search"></input>
               <button className="searchbutton" onClick={handleSearch}><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="divRight">
@@ -81,7 +81,7 @@ const  Navigation = () => {
           <div className="Navigation">
             <div className="divIcon">
               <Icon className="Icon" />
-              <input type="text" className="searchbar" placeholder="Pizza, Seafood, Burgers"></input>
+              <input type="text" className="searchbar" placeholder="Search"></input>
               <button className="searchbutton" onClick={handleSearch}><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="divRight">
