@@ -13,10 +13,11 @@ Rails.application.routes.draw do
     resources :businesses, only: [:index, :show, :create, :destroy] do 
       resources :reviews, only: [:index]
     end
+
+    get 'businesses/search/:term', to: 'businesses#search'
+
     resources :reviews, only: [ :create, :destroy, :update, :show]
   end
 
   get '*path', to: "static_pages#frontend_index"
-
-
 end

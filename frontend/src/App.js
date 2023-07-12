@@ -8,6 +8,7 @@ import BusinessShowPage from './components/BusinessShowPage';
 import BusinessIndex from './components/BusinessIndex';
 import WriteReview from './components/WriteReview/WriteReview';
 import UpdateReview from './components/UpdateReview/UpdateReview';
+import Search from './components/Search/Search';
 
 const App = () => {
 
@@ -22,6 +23,8 @@ const App = () => {
         <Route exact path="/businesses/:id" component={BusinessShowPage} />
         <Route exact path="/businesses/:id/writereview" component={WriteReview} />
         <Route exact path="/businesses/:id/updatereview" component={UpdateReview} />
+        <Route exact path="/businesses/search/:term" component={Search} />
+
       </Switch>
     </div>
   );

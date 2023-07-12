@@ -18,13 +18,18 @@ const  Navigation = () => {
     const dispatch = useDispatch();
     const sessionUser = useSelector((state) => state.session.user);
     const [showDropdown, setShowDropdown] = useState(false);
+    const [searchInput, setSearchInput] = useState('');
     const history = useHistory()
 
     const handleSearch = (e) => {
-      e.preventDefault()
-      history.push("/businesses")
-
+      e.preventDefault();
+      history.push(`/businesses/search/${searchInput}`);
     }
+
+    const handleSearchChange = (e) => {
+      setSearchInput(e.target.value);
+    }
+
 
     const handleDemo = (e) => {
       e.preventDefault()
@@ -51,7 +56,7 @@ const  Navigation = () => {
           <div className="Navigation">
             <div className="divIcon">
               <Icon className="icon" />
-              <input type="text" className="searchbar" placeholder="Search"></input>
+              <input type="text" className="searchbar" placeholder="Search" value={searchInput} onChange={handleSearchChange}></input>
               <button className="searchbutton" onClick={handleSearch}><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="divRight">
@@ -81,7 +86,7 @@ const  Navigation = () => {
           <div className="Navigation">
             <div className="divIcon">
               <Icon className="Icon" />
-              <input type="text" className="searchbar" placeholder="Search"></input>
+              <input type="text" className="searchbar" placeholder="Search" value={searchInput} onChange={handleSearchChange}></input>
               <button className="searchbutton" onClick={handleSearch}><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="divRight">
