@@ -23,7 +23,11 @@ const  Navigation = () => {
 
     const handleSearch = (e) => {
       e.preventDefault();
-      history.push(`/businesses/search/${searchInput}`);
+      if (searchInput.trim() !== '') {
+        history.push(`/businesses/search/${searchInput}`);
+      } else {
+        history.push(`/businesses`);
+      }
     }
 
     const handleSearchChange = (e) => {

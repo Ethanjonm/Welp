@@ -5,6 +5,7 @@ import BusinessItem from '../BusinessIndex/BusinessItem';
 import "../BusinessIndex/BusinessIndex.css";
 import SearchMap from '../Map/SearchMap';
 import { useParams } from 'react-router-dom';
+import IndexMap from '../Map/IndexMap';
 
 
 const Search = ()  => {
@@ -13,8 +14,6 @@ const Search = ()  => {
     const [filteredBusinesses, setFilteredBusinesses] = useState([]);
    
     const businesses = useSelector(getBusinesses)
-
-    console.log(search.term)
     
     
     useEffect(() => {
@@ -28,6 +27,15 @@ const Search = ()  => {
     useEffect(() => {
         dispatch(fetchBusinesses());
     }, [dispatch]);
+
+    if (filteredBusinesses.length === 0) {
+        return (
+            <div>
+                <div>No Results Found</div>
+                <SearchMap filteredBusinesses={filteredBusinesses}/>
+            </div>
+        );
+    }
 
     return (
         <div>
