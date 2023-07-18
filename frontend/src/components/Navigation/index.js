@@ -60,7 +60,7 @@ const  Navigation = () => {
           <div className="Navigation">
             <div className="divIcon">
               <Icon className="icon" />
-              <input type="text" className="searchbar" placeholder="Search" value={searchInput} onChange={handleSearchChange}></input>
+              <input type="text" className="searchbar" placeholder="Pizza, Burgers, Ramen" value={searchInput} onChange={handleSearchChange}></input>
               <button className="searchbutton" onClick={handleSearch}><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="divRight">
@@ -90,7 +90,7 @@ const  Navigation = () => {
           <div className="Navigation">
             <div className="divIcon">
               <Icon className="Icon" />
-              <input type="text" className="searchbar" placeholder="Search" value={searchInput} onChange={handleSearchChange}></input>
+              <input type="text" className="searchbar" placeholder="Pizza, Burgers, Ramen" value={searchInput} onChange={handleSearchChange}></input>
               <button className="searchbutton" onClick={handleSearch}><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="divRight">

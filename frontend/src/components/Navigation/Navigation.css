@@ -8,6 +8,8 @@
   z-index: 10;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid black; /* Change 'border' to 'border-bottom' */
+  background-color: white;  /* Sets the background color to white */
 }
   
 .divIcon {
@@ -116,3 +118,4 @@
 .linkedinbutton:hover {
     background-color: #bc2020; /* a darker red */
 }
+

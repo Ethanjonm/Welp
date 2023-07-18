@@ -1,0 +1,44 @@
+#main-footer {
+    width: 100%;
+    background-color: lightgray;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 200px;
+    /* border: 1px solid red; this line adds a black border */
+}
+
+#footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 200px;
+    
+}
+
+#copyright {
+    
+    text-align: center;
+}
+
+#footer-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 19px;
+}
+
+#per-link {
+    text-decoration: none;
+    line-height: 150%;
+    font-size: 14px;
+    color: black;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+#footer-col > li, #copyright {
+    line-height: 150%;
+    font-size: 14px;
+    color: black;
+    margin: 10px 0;
+}

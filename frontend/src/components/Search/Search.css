@@ -1,0 +1,64 @@
+.indexItems {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    max-width: 600px; /* adjust as needed */
+    width: 100%;
+    /* border: 1px solid black;  */
+    margin-left: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.indexItems:hover {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); /* Add shadow effect when hovering */
+}
+
+.infoContainer {
+    flex: 2;
+    padding: 20px;
+    margin-right: 150px;
+}
+
+.indexImageContainer {
+    flex: 1;
+    margin-left: 70px; /* adjust as needed */
+    /* border: 1px solid red; */
+    margin-top: 5px;
+}
+
+.indexImage {
+    width: 190px;
+    height: fit-content;
+
+}
+
+.pageContainer {
+    display: flex;
+}
+
+.businessindex {
+    flex: 2;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+.SearchMap {
+    width: 800px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+
+.Browsing{
+    font-size: 30px;
+    margin-left: 90px;
+}
+
+.businessName{
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}

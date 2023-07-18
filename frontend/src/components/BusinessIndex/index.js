@@ -28,8 +28,9 @@ const BusinessIndex = ()  => {
     }, [dispatch]);
 
     return (
-        <div>
+        <div className="pageContainer">
             <div className='businessindex'>
+                <h2 className='Browsing'>Browsing New York, NY businesses</h2>
                 {filteredBusinesses.map((business) => {
                     return (
                     <div className='businessItem' key={business.id}>

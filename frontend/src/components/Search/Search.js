@@ -18,7 +18,7 @@ const Search = ()  => {
     
     useEffect(() => {
         if (businesses && search) {
-            setFilteredBusinesses(businesses.filter(b => b.name.toLowerCase().includes(search.term.toLowerCase())));
+            setFilteredBusinesses(businesses.filter(b => b.category.toLowerCase().includes(search.term.toLowerCase())));
         } else {
             setFilteredBusinesses(businesses);
         }
@@ -38,8 +38,9 @@ const Search = ()  => {
     }
 
     return (
-        <div>
+        <div className="pageContainer">
             <div className='businessindex'>
+                <h2 className='Browsing'>Browsing New York, NY businesses</h2>
                 {filteredBusinesses.map((business) => {
                     return (
                     <div className='businessItem' key={business.id}>
@@ -55,3 +56,5 @@ const Search = ()  => {
 }
 
 export default Search;
+
+{/* <SearchMap filteredBusinesses={filteredBusinesses}/> */}

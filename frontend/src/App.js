@@ -9,6 +9,7 @@ import BusinessIndex from './components/BusinessIndex';
 import WriteReview from './components/WriteReview/WriteReview';
 import UpdateReview from './components/UpdateReview/UpdateReview';
 import Search from './components/Search/Search';
+import Footer from './Footer/Footer';
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const App = () => {
         <Route exact path="/businesses/search/:term" component={Search} />
 
       </Switch>
+      <Footer />
     </div>
   );
 }

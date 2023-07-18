@@ -13,8 +13,11 @@ export default function IndexMap() {
     });
 
     if (!isLoaded) return <div>Loading...</div>
-    return <Map businesses={businesses} />
-  
+    return (
+        <div className="IndexMap">
+            <Map businesses={businesses} />
+        </div>
+    );
 
 }
 

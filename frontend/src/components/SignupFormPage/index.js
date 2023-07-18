@@ -42,9 +42,9 @@ const SignupFormPage = () => {
 
     <div className="Container">  
         <div className="SignupForm-Container"> 
-            <h2>Sign Up for Welp</h2>
+            <h2 className="signup-title">Sign Up for Welp</h2>
             <p>Connect with local Businesses</p>
-            <p>Term of Service... Mabey</p>
+            {/* <p>Term of Service</p> */}
             <form onSubmit={handleSubmit}>
             <ul className="errors">
                 {errors.map(error => <li key={error}>{error}</li>)}
@@ -107,9 +107,6 @@ const SignupFormPage = () => {
             </label>
             <button id="Signup" type="submit">Sign Up</button>
             </form>
-        </div>
-        <div className="Image-Container">
-            <h1>IMAGE PLACE HOLDER</h1>
         </div>
     </div>
   );
