@@ -9,7 +9,7 @@ import BusinessIndex from './components/BusinessIndex';
 import WriteReview from './components/WriteReview/WriteReview';
 import UpdateReview from './components/UpdateReview/UpdateReview';
 import Search from './components/Search/Search';
-import Footer from './Footer/Footer';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
 
