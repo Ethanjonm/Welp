@@ -40,21 +40,42 @@ const WriteReview = () => {
     await dispatch(createReview(reviewObj, businessId.id, history));
   };
 
+  let starColor1 = rating >= 1 ? "gold" : "grey";
+  let starColor2 = rating >= 2 ? "gold" : "grey";
+  let starColor3 = rating >= 3 ? "gold" : "grey";
+  let starColor4 = rating >= 4 ? "gold" : "grey";
+  let starColor5 = rating >= 5 ? "gold" : "grey";
+
+  const handleStarClick = (value) => {
+    setRating(value);
+  };
+
+
   return (
       <div className='ReviewForm'>
-          <h1 className='ReviewFormTitle'>{business.name}</h1>
+          <h1 className='ReviewFormTitle'>Write a Review</h1>
+          <br></br>
       <div className='ReviewFormWrap'>
+        <h1 className='ReviewRatingTitle'>Rating</h1>
         <form onSubmit={handleSubmit}>
           <label className="ReviewFormRating">
-            <input
+            <div className='reviewStarRating'>
+              <i className="fa-solid fa-star" style={{ color: starColor1 }} onClick={() => handleStarClick(1)}></i>
+              <i className="fa-solid fa-star" style={{ color: starColor2 }} onClick={() => handleStarClick(2)}></i>
+              <i className="fa-solid fa-star" style={{ color: starColor3 }} onClick={() => handleStarClick(3)}></i>
+              <i className="fa-solid fa-star" style={{ color: starColor4 }} onClick={() => handleStarClick(4)}></i>
+              <i className="fa-solid fa-star" style={{ color: starColor5 }} onClick={() => handleStarClick(5)}></i>
+            </div>
+            {/* <input
               type="number"
               min="1"
               max="5"
               value={rating}
               onChange={(e) => setRating(e.target.value)}
               required
-            />
+            /> */}
           </label>
+          <h1 className='YourReview'>Your Review</h1>
           <label className='ReviewFormTextarea'>
             <textarea
               value={body}
@@ -63,12 +84,7 @@ const WriteReview = () => {
               className='PleaseWork'
               maxLength="1300"
               minLength="100"
-              placeholder="WRITE, but I was practically dying of hunger so I popped in. 
-            The definition of a hole-in-the-wall. I got the regular hamburger and wow…  there are no words. 
-            A classic burger done right. Crisp bun, juicy patty, stuffed with all the essentials 
-            (ketchup, shredded lettuce, tomato, and pickles). There’s about a million options available between 
-            the menu board and wall full of specials, so it can get a little overwhelming, but you really can’t 
-            go wrong. Not much else to say besides go see for yourself! You won’t be disappointed."
+              placeholder="Write a review"
             />
           </label>
           <button type="submit" className='ReviewFormSubmit'>Submit Review</button>
