@@ -53,6 +53,12 @@ const  Navigation = () => {
     const handleNavLinkClick = () => {
       setShowDropdown(false);
     }
+
+    const handleKeyPress = (e) => {
+      if (e.key === "Enter") {
+        handleSearch(e);
+      }
+    };
     
     
     if (!sessionUser) {
@@ -60,28 +66,23 @@ const  Navigation = () => {
           <div className="Navigation">
             <div className="divIcon">
               <Icon className="icon" />
-              <input type="text" className="searchbar" placeholder="Pizza, Burgers, Ramen" value={searchInput} onChange={handleSearchChange}></input>
+              <input type="text" className="searchbar" placeholder="Pizza, Burgers, Ramen" value={searchInput} onChange={handleSearchChange} onKeyPress={handleKeyPress}></input>
               <button className="searchbutton" onClick={handleSearch}><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="divRight">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                  <button className="githubbutton">GitHub</button>
+              
+              <a href="https://github.com/Ethanjonm" target="_blank" rel="noopener noreferrer">
+                  <button className="githubbutton"><i class="fa-brands fa-github" style={{color : "black"}}></i></button>
               </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                  <button className="linkedinbutton">LinkedIn</button>
+              
+              <a href="https://www.linkedin.com/in/ethan-mercado-31312717a/" target="_blank" rel="noopener noreferrer">
+                  <button className="linkedinbutton"><i class="fa-brands fa-linkedin" style={{color : "black"}}></i></button>
               </a>
-              <div style={{ color: "Red", fontSize: "30px" }} className="dropicon" onClick={toggleDropdown}>
-                <i className="fa-solid fa-house"></i>
+              <NavLink onClick={handleNavLinkClick} className="login" to="/login">Log In</NavLink>
+              <NavLink onClick={handleNavLinkClick} className="signUp" to="/signup">Sign Up</NavLink>
+              <div onClick={handleDemo}>
+                  <NavLink onClick={handleNavLinkClick} className="demoLogin" to="/">Demo Login</NavLink>
               </div>
-              {showDropdown && (
-                <div className="dropdown-menu">
-                  <NavLink onClick={handleNavLinkClick} className="login" to="/login">Log In</NavLink>
-                  <NavLink onClick={handleNavLinkClick} className="signUp" to="/signup">Sign Up</NavLink>
-                  <div onClick={handleDemo}>
-                    <NavLink onClick={handleNavLinkClick} className="demoLogin" to="/">Demo Login</NavLink>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         );
@@ -90,18 +91,18 @@ const  Navigation = () => {
           <div className="Navigation">
             <div className="divIcon">
               <Icon className="Icon" />
-              <input type="text" className="searchbar" placeholder="Pizza, Burgers, Ramen" value={searchInput} onChange={handleSearchChange}></input>
+              <input type="text" className="searchbar" placeholder="Pizza, Burgers, Ramen" value={searchInput} onChange={handleSearchChange} onKeyPress={handleKeyPress}></input>
               <button className="searchbutton" onClick={handleSearch}><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="divRight">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                  <button className="githubbutton">GitHub</button>
+                  <button className="githubbutton"><i class="fa-brands fa-github" style={{color : "black"}}></i></button>
               </a>
               <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                  <button className="linkedinbutton">LinkedIn</button>
+                  <button className="linkedinbutton"><i class="fa-brands fa-linkedin" style={{color : "black"}}></i></button>
               </a>
               <div style={{ color: "Red", fontSize: "30px" }} className="dropicon" onClick={toggleDropdown}>
-                <i className="fa-solid fa-circle-user"></i>
+                <i className="fa-solid fa-circle-user" ></i>
               </div>
               {showDropdown && (
                 <div className="dropdown-menu">

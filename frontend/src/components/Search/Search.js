@@ -30,8 +30,10 @@ const Search = ()  => {
 
     if (filteredBusinesses.length === 0) {
         return (
-            <div>
-                <div>No Results Found</div>
+            <div className='pageContainer'>
+                <div className='businessindex'>
+                    <div className='Browsing'>No Results Found</div>
+                </div>
                 <SearchMap filteredBusinesses={filteredBusinesses}/>
             </div>
         );
