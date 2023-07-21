@@ -84,6 +84,10 @@
   vertical-align: middle;
 }
 
+.searchbutton:hover{
+  background-color: #6e0808;
+}
+
 .linkedinbutton {
   color: #fff; 
   background-color: white; 
@@ -190,4 +194,9 @@
 
 .fa-circle-user{
   cursor: pointer;
+}
+
+
+.dropicon:hover .user-icon {
+  color: #6e0808;
 }

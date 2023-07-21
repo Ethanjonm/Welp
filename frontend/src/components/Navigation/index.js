@@ -102,7 +102,7 @@ const  Navigation = () => {
                   <button className="linkedinbutton"><i class="fa-brands fa-linkedin" style={{color : "black"}}></i></button>
               </a>
               <div style={{ color: "Red", fontSize: "30px" }} className="dropicon" onClick={toggleDropdown}>
-                <i className="fa-solid fa-circle-user" ></i>
+                  <i className="fa-solid fa-circle-user user-icon"></i>
               </div>
               {showDropdown && (
                 <div className="dropdown-menu">
