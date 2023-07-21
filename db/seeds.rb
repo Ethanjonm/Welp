@@ -8,6 +8,7 @@
 
 User.destroy_all
 Business.destroy_all
+Review.destroy_all
 
 
 User.create!(email: "ethan@ethan.com", password: "password", fname: "Ethan", lname: "Mercado", zip_code: "10011" )
