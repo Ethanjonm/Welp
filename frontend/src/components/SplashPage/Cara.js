@@ -6,3 +6,6 @@ import food8 from "../images/food8.jpg"
 import food7 from "../images/food7.jpg"
 import food10 from "../images/food10.jpg"
 import React, { useState, useEffect, useCallback } from 'react';
+
+const IMAGES = [food8, food7, food10, food6]
+
